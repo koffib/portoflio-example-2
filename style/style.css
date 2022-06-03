@@ -133,7 +133,7 @@ input{
 
 }
 
-.nav__logo{
+.nav__logo {
     position: absolute;
     left:0;
     right:0;
@@ -159,7 +159,7 @@ input{
     position: fixed;
     transform: rotate(-90deg) translateX(-100%);
     transform-origin: left top;
-    width: 100hv;
+    width: 100vh;
 }
 
 .menu{
@@ -173,14 +173,109 @@ input{
 }
 
 .nav__link {
-    
+    float:right;
     height: 100%;
     line-height: 100px;
     padding : 0 1rem;
-   
     color: var(--title-color);
     font-weight:var(--font-medium) ;
     position :relative;
+    transition: .4s;
+}
+
+.btn__share {
+    position: absolute;
+    bottom : 1.8rem;
+    left:0;
+    right:0;
+    text-align: center;
+}
+
+.social__share {
+    font-size : 1,5rem;
+}
+
+/* active link ------->*/
+.nav__link.active-link, .nav__link:hover {
+    color:var(--Skin-color);
+}
+
+.nav__link.active-link::after, .nav__link:hover::after{
+    position: absolute;
+    content:'';
+    width: 6px;
+    height: 6px;
+    background-color:  var(--Skin-color);
+    border-radius: 50%;
+    bottom: 1.8rem;
+    left:0;
+    right:0;
+    margin: auto;
+}
+
+/* ====== Main=======*/
+
+.main{
+    margin-left: 100px;
+}
+
+img{
+    border-radius: 50%;
+}
+
+/* ====Layout====*/
+.container {
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.grid {
+    display: grid;
+}
+
+/*=====Home Section====*/
+.home {
+    background :url('../images/man-2178721_1280.jpg') ;
+    background-size: cover;
+    height: 100vh;
+    background-position: center center;
+
+}
+
+.home__container {
+    position: relative;
+    height: 100%;
+    align-items: center;
+}
+
+.home__social {
+    position: relative;
+    left:0;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    column-gap:  3.5rem;
+
+}
+
+.home__social-follow {
+   font-weight: var(--font-medium);
+   position:relative;
+
+}
+
+.home__social-follow::after {
+    content:'';
+    position: absolute;
+    width: 1rem;
+    height: 2px;
+    background-color: var(--text-color);
+}
+
+.home__img {
+    display: none;
 }
 
 
