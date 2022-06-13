@@ -1,6 +1,7 @@
 /*--=======Show SideBar========*/
 
 
+
 /*--======Sidebar Show====*/
 
 
@@ -38,13 +39,27 @@ const tabs = document.querySelectorAll('[data-target]'),
 
 
 
-      /*========Mixitup filter portoflio=======*/
+/*========Mixitup filter portoflio=======*/
 
-      let mixerPortfolio = mixitup('.work__container', {
-        selectors: {
-            target: '.work__card'
-        },
-        animation: {
-            duration: 300
-        }
-    });
+  
+/*--======Input Animation======*/
+const inputs = document.querySelectorAll(".input");
+
+function focusFunc() {
+    let parent = this.parentNode;
+    parent.classList.add("focus");
+}
+
+function blurFunc() {
+    let parent =  this.parentNode;
+    if(this.value == ""){
+        parent.classList.remove("focus");
+    }
+}
+
+inputs.forEach((input) => {
+    input.addEventListener("focus",focusFunc);
+    input.addEventListener("blur",blurFunc);
+})
+
+

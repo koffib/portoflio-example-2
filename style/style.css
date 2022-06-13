@@ -687,7 +687,7 @@ img{
 }
 
 /*====Contact Section=====*/
-.contact_container {
+.contact__container {
     grid-template-columns: 300px 340px;
     column-gap: 3rem;
     justify-content: center;
@@ -791,7 +791,7 @@ resize: none;
     transition:  .5s;
 }
 
-.input__container .textarea label {
+.input__container.textarea label {
 top : 1rem;
 transform: translateY(0);
 
@@ -817,7 +817,7 @@ transform: translateY(0);
     opacity: 0;
     width: 10%;
     height: 5px;
-    background-color: var(--text-color);
+    background-color: var(--body-color);
     top: 50%;
     transform: translateY(-50%) ;
     transition: .3s;
@@ -825,7 +825,101 @@ transform: translateY(0);
 
 
 .input__container span::before {
-    
+    left : 50%;
+}
+
+.input__container span::after {
+    right : 50%;
+}
+
+.input__container.focus label {
+    top: 0;
+    transform: translateY(-50%);
+    left: 25px;
+    font-size: var(--small-font-size);
+}
+
+.input__container.focus span::before,
+.input__container.focus span::after {
+    width: 50%;
+    opacity: 1 ;
+}
+
+/*==========Footer ==========*/
+.footer {
+    padding-top : 2rem;
+}
+
+.footer__container {
+    grid-template-columns: repeat(3, 1fr) ;
+    column-gap: 1.6rem;
+}
+
+.footer__bg {
+   background-color: var(--box-color);
+   padding: 3rem 0 3.5 rem; 
+}
+
+.footer__title {
+    font-size: var(--h1-font-size);
+    margin-bottom: var(--mb-0-25);
+}
+
+.footer__subtitle {
+    font-size: var(--small-font-size);
+}
+
+.footer__links {
+    display: flex ;
+    justify-self:center;
+    column-gap: 2rem;
+}
+
+.footer__link:hover {
+    color : var(--Skin-color)
+}
+
+
+.footer__socials {
+    justify-self: flex-end;
+}
+
+
+.footer__social {
+    font-size: 1.25rem;
+    margin-right: var(--mb-1-5);
+}
+
+.footer__social:hover {
+    color: var(--Skin-color)
+
+}
+
+
+.footer__copy {
+    font-size:var(--smaller-font-size);
+    text-align: center;
+    margin-top: 4,5rem;;
+}
+.footer__title,
+.footer__subtitle,
+.footer__link,
+.footer__social {
+    color: var(--title-color);
+}
+
+
+/*=====Scroll bar ====*/
+::-webkit-scrollbar {
+    width: .60rem;
+    background-color: var(--title-color);
+    border-radius: .5rem;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--box-color);
+    border-radius: .5rem;
 }
 
 
