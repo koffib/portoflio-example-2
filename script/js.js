@@ -1,13 +1,25 @@
 /*--=======Show SideBar========*/
-
+const navMenu = document.getElementById('sidebar'),
+navToggle = document.getElementById('nav-toggle'),
+navClose =  document.getElementById('nav-close')
 
 
 /*--======Sidebar Show====*/
+/*Validation if constant exist */
+if(navToggle) {
+    navToggle.addEventListener("click", () => {
+        navMenu.classList.add('show-sidebar')
+    })
+}
 
 
+/*--======Sidebar Hide======*/
 
-
-/*--======Sidebar======*/
+if(navClose) {
+    navClose.addEventListener("click", () => {
+        navMenu.classList.remove('show-sidebar')
+    })
+}
 
 
 
